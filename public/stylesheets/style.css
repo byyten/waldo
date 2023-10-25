@@ -1,0 +1,99 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.head {
+  display: flex; 
+  justify-content: start;
+  align-content: start;
+}
+.sub {
+  min-width: 50vw;
+}
+.image_container {
+  position: absolute;
+  margin-right: 100px;
+  margin-bottom: 100px;
+  width: 100vw;
+
+}
+img.waldoBeachScene {
+  width: 90vw;
+  height: auto;
+  position: absolute;
+  margin-bottom: 100px;
+  /* width: 90vw; */
+}
+
+._selection {
+  border: 1px solid black;
+  fill: rgba(255,255,255,0.1);
+  position: absolute;
+  display: none;
+  /* visibility: hidden; */
+  
+}
+._select_targets_dlg {
+  padding: 1rem 2rem;
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.65);
+}
+._select_targets_box {
+  display: flex;
+  flex-direction: column;
+}
+
+._select_target_ok, .reset, .results_ok, .results_xok {
+  /* float: right; */
+  padding: 0.5rem 1rem;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  margin-right: 2rem;
+  min-width: 5rem;
+}
+
+._select_target_result_dlg, ._results_dlg {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: none;
+  position: absolute;
+  padding: 1rem 2rem;
+  border: 1px solid darkslategray;
+  border-radius: 5px;
+ 
+}
+
+ul {
+  list-style: none;
+}
+.sub {
+  margin: 1rem; 
+}
+
+input.player {
+  appearance: none;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid darkslategray;
+  border-radius: 3px;
+  /* margin-left: 1rem; */
+}
+label.player {
+  padding-right: 0.5rem;
+}
+
+span {
+  min-width: 4rem;
+  padding: 0.1rem 0.5rem;
+  display: inline-block;
+}
+span.right { text-align: right;}
+
+li.result {
+  margin: 0.5rem 0;
+}

@@ -1,0 +1,88 @@
+extends layout
+
+block content
+
+  h1 Waldo is lost again!
+  .head
+    .sub
+      h4 Intro
+      ul
+        li Where has Waldo gone? He's a right wally right? 
+        li He's wearing a woolen hat, long pants and a stripped shirt in summer on the beach! Absolute and complete madness! 
+        li find also a camera and a cactus and 
+        li another (mad) person dressed in winter clothes! 
+        li register your times (how fast you find and drag / select the targets) against the leaderboard! 
+      br
+      button#reset.reset Reset
+      br
+      br
+    .leaders 
+      h4 leader board
+      ul 
+        li.head 
+          span.right Time 
+          span.right Score 
+          span Player
+        li.leaders.first 
+          span.right Time 
+          span.right Score 
+          span Player
+        li.leaders.second 
+          span.right Time 
+          span.right Score 
+          span Player
+        li.leaders.third 
+          span.right Time 
+          span.right Score 
+          span Player
+        li.leaders.fourth 
+          span.right Time 
+          span.right Score 
+          span Player
+        li.leaders.fifth 
+          span.right Time 
+          span.right Score 
+          span Player
+
+  #image_container.image_container
+    img#waldoBeachScene(src="/images/whereswaldobeach.png")
+    #_selection._selection
+    #_select_targets_dlg._select_targets_dlg
+      #_select_targets_box._select_targets_box
+        select#_select_target._select_target
+          each target in ["select a target", "Waldo", "Cactus", "Camera", "WinterWoolies"]
+            option #{target} 
+        button#_select_target_ok._select_target_ok Confirm
+    #_select_target_result_dlg._select_target_result_dlg
+      p targeting results
+      ul 
+        li.target 
+        li.iou 
+        //- li.selected
+        //- li.targeted
+    #_results_dlg._results_dlg
+      h4 Results
+      label.player(for="player" placeholder="player name") Player name
+      input#player.player
+      ul 
+        li.result
+        li.target
+          span.target 
+          span.iou 
+          span.precision
+        li.target
+          span.target 
+          span.iou 
+          span.precision
+        li.target
+          span.target 
+          span.iou 
+          span.precision
+        li.target
+          span.target 
+          span.iou 
+          span.precision
+      
+      .div
+        button#results_xok.results_xok(title="Cancel to not register results") Cancel
+        button#results_ok.results_ok(title="OK to register for the leader board") OK

@@ -225,8 +225,8 @@ class WaldosWhere {
             this.results_li_targets[idx].querySelector("span.precision").textContent = this.scores[key].precision  
         })
         let position = leaderboard.filter(plyr => plyr.time < this.maxt).length + 1
+        let suffix
         if (position < 6) {
-            let suffix
             switch (position) {
                 case 1: suffix = "st"; break;
                 case 2: suffix = "nd"; break;
@@ -234,7 +234,7 @@ class WaldosWhere {
                 default: suffix = "th"
             } 
         }
-        alert("Your're an ACE !\n--------------------------\n\nYour time puts you at" + position + suffix + " on the leader board \nregister your time + score!")
+        alert("Your're an ACE !\n--------------------------\n\nYour time puts you at " + position + suffix + " on the leader board \nregister your time + score!")
         this.result.textContent = Math.round(this.ious * 100 / skeys.length) + "% accuracy in " + this.maxt.toFixed(3) + " secs" ;
     }
 
